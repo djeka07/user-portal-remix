@@ -1,0 +1,39 @@
+#app {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-height: 100vh;
+}
+
+main {
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+
+p {
+  margin: 0 0 0.3rem 0;
+  color: #f87171;
+  flex-basis: 100%;
+}
+
+ul {
+  margin-block-end: 0;
+  margin-block-start: 0;
+  padding-inline-start: 0;
+  list-style: none;
+}
+
+.loading-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #354052;
+}
+
+
+

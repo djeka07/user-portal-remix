@@ -12,4 +12,3 @@ const UserHeaderContainer = ({ user }: UserHeaderContainerProps) => {
 };
 
 export default UserHeaderContainer;
-1;

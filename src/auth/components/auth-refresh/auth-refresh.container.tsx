@@ -1,4 +1,3 @@
-import { createDate } from '~/app/models/helpers/date';
 import { ProgressState } from '~/app/models/types/fetch.state';
 
 import { useFetcher, useLocation } from '@remix-run/react';
@@ -9,6 +8,7 @@ import AuthRefresh from './auth-refresh';
 import { AuthActionIntent } from '~/auth/models/enums/intent.enum';
 import { Authorization } from '~/app/models/helpers/token';
 import { createFormData } from '@djeka07/utils';
+import { createDate } from '@djeka07/dates';
 
 const AuthRefreshContainer = () => {
   const [state, { updateToken }] = useAuth();
@@ -30,7 +30,7 @@ const AuthRefreshContainer = () => {
       }, 3000);
     }
     return () => {
-      if (!!timeout) {
+      if (timeout) {
         clearTimeout(timeout);
       }
     };

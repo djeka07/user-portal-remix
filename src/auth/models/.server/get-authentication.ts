@@ -1,7 +1,7 @@
 import { Authorization } from '~/app/models/helpers/token';
 import { authenticator } from './auth';
 import { redirect } from '@remix-run/node';
-import { isBefore } from '~/app/models/helpers/date';
+import { isBefore } from '@djeka07/dates';
 
 export default async (request: Request): Promise<Authorization> => {
   try {
@@ -14,7 +14,7 @@ export default async (request: Request): Promise<Authorization> => {
       return authenticator.logout(request, { redirectTo: '/login' });
     }
     return token;
-  } catch (error) {
+  } catch {
     return authenticator.logout(request, { redirectTo: '/login' });
   }
 };

@@ -17,7 +17,10 @@ import './app/styles/app.css';
 import createTheme from '~/app/styles';
 import { createStyleSheet } from '@djeka07/ui';
 
-export const links: LinksFunction = () => [...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : [])];
+export const links: LinksFunction = () => [
+  ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
+  { rel: 'stylesheet', href: 'https://staticaks.blob.core.windows.net/static/css/style.css' },
+];
 
 export async function loader({ request }: LoaderFunctionArgs) {
   const locale = await i18nServer.getLocale(request);

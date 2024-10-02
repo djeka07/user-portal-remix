@@ -1,5 +1,5 @@
 import { Token } from '~/users/models/services/generated/user.generated';
-import { createDate } from './date';
+import { createDate } from '@djeka07/dates';
 
 export type Authorization = {
   accessToken: string;

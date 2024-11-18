@@ -1,8 +1,7 @@
-import { UserForm } from '../user-form';
-import { useAuth } from '~/auth/models/hooks/use-auth';
 import { useTranslation } from 'react-i18next';
-import { useFetcher } from '@remix-run/react';
+import { useAuth } from '~/auth/models/hooks/use-auth';
 import { UserActionIntent } from '~/users/models/enums/intents';
+import { UserForm } from '../user-form';
 
 type CreateUserContainerProps = {
   onCancel?: () => void;

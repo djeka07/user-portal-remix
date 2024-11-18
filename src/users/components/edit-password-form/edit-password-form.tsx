@@ -59,8 +59,10 @@ const EditPasswordForm = ({ user, action: formAction, onCancel }: EditPasswordFo
         {...register('confirmPassword')}
       />
       <div className={buttonWrapper}>
-        <Button success>{t('common:button:update')}</Button>
-        <Button onClick={onCancel} error outlined>
+        <Button label={t('common:button:update')} success>
+          {t('common:button:update')}
+        </Button>
+        <Button label={t('common:button:cancel')} onClick={onCancel} error outlined>
           {t('common:button:cancel')}
         </Button>
       </div>

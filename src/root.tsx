@@ -14,12 +14,12 @@ import { useChangeLanguage } from 'remix-i18next/react';
 import { useColorMode } from './app/models/hooks';
 import i18nServer, { localeCookie } from './app/models/server/i18n.server';
 import './app/styles/app.css';
-import createTheme from '~/app/styles';
-import { createStyleSheet } from '@djeka07/ui';
+import { createStyleSheet, createDefaultTheme } from '@djeka07/ui';
+import styleUrl from '@djeka07/ui/style.css?url';
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
-  { rel: 'stylesheet', href: 'https://staticaks.blob.core.windows.net/static/css/style.css' },
+  { rel: 'stylesheet', href: styleUrl },
 ];
 
 export async function loader({ request }: LoaderFunctionArgs) {
@@ -35,7 +35,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {createStyleSheet(createTheme(mode))}
+        {createStyleSheet(createDefaultTheme(mode))}
         <Meta />
         <Links />
       </head>

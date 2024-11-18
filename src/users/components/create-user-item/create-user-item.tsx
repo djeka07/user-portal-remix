@@ -13,7 +13,9 @@ const CreateUserItem = () => {
         <div className={wrapper}>
           <Icon color="heading" size="xxlarge" name="UserPlus" />
           <Typography variant="h3">{t('form:user:title:create')}</Typography>
-          <Button onClick={() => setShow(true)}>{t('common:button:create')}</Button>
+          <Button label={t('common:button:create')} onClick={() => setShow(true)}>
+            {t('common:button:create')}
+          </Button>
         </div>
       </div>
       {show && (
